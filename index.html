@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Matematik Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <h1>Selamat datang di Katik</h1>
+    <header>
+        <h1>Selamat datang di Katik!</h1>
+        <p>Ini adalah Kalkulator Matematika (Katik) 😆</p>
+        <p>Sebuah web apps sederhana yang berfungsi menghitung nilai luas dan keliling bangun datar</p>
+    </header>
+
+    <nav>
+        <p>Pilih Bangun Datar</p>
+        <details>
+            <summary>Segitiga</summary>
+            <ul>
+                <li><a href="#">Luas Segitiga</a></li>
+                <li><a href="#">Keliling Segitiga</a></li>
+            </ul>
+        </details>          
+        <details>
+            <summary>Jajar Genjang</summary>
+            <ul>
+                <li><a href="#">Luas Jajar Genjang</a></li>
+                <li><a href="#">Keliling Jajar Genjang</a></li>
+            </ul>
+        </details>          
+    </nav>
+
+    <main>
+
+        <div id="luas-segitiga">
+            <h2>Luas Segitiga</h2>
+
+            <figure>
+                <img src="img/segitiga-sama-kaki.png" alt="Elephant at sunset" />
+                <figcaption>Rumus <strong>Luas segitiga = 1/2 x alas x tinggi</strong></figcaption>
+            </figure>
+
+            <div id="myform">
+                <h3>Hitung Luas Segitiga</h3>
+                <form id="luas-form">
+                    <input type="number" min="1" id="alas" required>
+                    <input type="number" min="1" id="tinggi" required>
+                    <input type="submit" value="Hitung" id="save">
+    
+                    <button id="reset">Reset</button>
+                </form>
+    
+                <div id="result">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div id="keliling-segitiga">
+            <h2>Keliling Segitiga</h2>
+
+            <figure>
+                <img src="img/segitiga-sama-kaki.png" alt="Elephant at sunset" />
+                <figcaption>Rumus <strong>Keliling segitiga = s x s x s</strong></figcaption>
+            </figure>
+
+            <div>
+                <h3>Hitung Luas Keliling</h3>
+                <form action="" method="post">
+                    <input type="number" min="1">
+                    <input type="number" min="1">
+                    <input type="number" min="1">
+                    <input type="submit" value="Hitung">
+    
+                    <button>Reset</button>
+                </form>
+    
+                <div id="result">
+                </div>
+            </div>
+        </div> -->
+        
+        
+        
+    </main>
+
     
 </body>
 </html>
