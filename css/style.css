@@ -108,3 +108,28 @@ label {
 #resultLuasSegitiga > p, #resultKelilingSegitiga > p, #resultLuasJajarGenjang > p, #resultKelilingJajarGenjang > p{
     margin: 0.5rem;
 }
+
+footer{
+    margin: 1rem;
+    text-align: center;
+}
+
+
+#backOnTop{
+    text-align: center;
+    flex-direction: column;
+    position: fixed;
+    margin: 1 rem;
+    right: 25px;
+    bottom: 25px;
+}
+
+#backOnTop > a{
+    text-decoration: none;
+}
+
+#backOnTop > p{
+    padding: 0;
+    margin: 0;
+    font-size: 0.6rem;
+}
