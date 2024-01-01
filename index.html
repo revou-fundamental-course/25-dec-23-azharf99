@@ -19,15 +19,15 @@
         <details>
             <summary>Segitiga</summary>
             <ul>
-                <li><a href="#luas-segitiga">Luas Segitiga</a></li>
-                <li><a href="#keliling-segitiga">Keliling Segitiga</a></li>
+                <li><a href="#luas-segitiga" id="tombol_luas_segitiga">Luas Segitiga</a></li>
+                <li><a href="#keliling-segitiga" id="tombol_keliling_segitiga">Keliling Segitiga</a></li>
             </ul>
         </details>          
         <details>
             <summary>Jajar Genjang</summary>
             <ul>
-                <li><a href="#">Luas Jajar Genjang</a></li>
-                <li><a href="#">Keliling Jajar Genjang</a></li>
+                <li><a href="#luas-jajar-genjang" id="tombol_luas_jajar_genjang">Luas Jajar Genjang</a></li>
+                <li><a href="#keliling-jajar-genjang" id="tombol_keliling_jajar_genjang">Keliling Jajar Genjang</a></li>
             </ul>
         </details>          
     </nav>
@@ -46,21 +46,21 @@
                 <h3>Hitung Luas Segitiga</h3>
                 <form id="luas-form">
                     <div>
-                        <label for="alas">Nilai alas (cm):</label>
-                        <input type="number" min="1" id="alas" name="alas" required>
+                        <label for="alas_segitiga">Nilai alas (cm):</label>
+                        <input type="number" min="1" id="alas_segitiga" name="alas_segitiga" required>
                     </div>
                     <div>
-                        <label for="tinggi">Nilai tinggi (cm):</label>
-                        <input type="number" min="1" id="tinggi" name="tinggi" required>
+                        <label for="tinggi_segitiga">Nilai tinggi (cm):</label>
+                        <input type="number" min="1" id="tinggi_segitiga" name="tinggi_segitiga" required>
                     </div>
                     <div>
-                        <input type="submit" value="Hitung" id="hitungLuas">
+                        <input type="submit" value="Hitung" id="hitungLuasSegitiga">
         
-                        <button id="resetLuas">Reset</button>
+                        <button id="resetLuasSegitiga">Reset</button>
                     </div>
                 </form>
     
-                <div id="resultLuas">
+                <div id="resultLuasSegitiga">
                 </div>
             </div>
         </div>
@@ -90,12 +90,82 @@
                         <input type="number" min="1" id="sisi3" name="sisi3" required>
                     </div>
                     <div>
-                        <input type="submit" value="Hitung" id="hitungKeliling">
-                        <button id="resetKeliling">Reset</button>
+                        <input type="submit" value="Hitung" id="hitungKelilingSegitiga">
+                        <button id="resetKelilingSegitiga">Reset</button>
                     </div>
                 </form>
     
-                <div id="resultKeliling">
+                <div id="resultKelilingSegitiga">
+                </div>
+            </div>
+        </div>
+
+        <div id="luas-jajar-genjang">
+            <h2>Luas Jajar Genjang</h2>
+
+            <figure>
+                <img src="img/jajar-genjang.png" alt="Elephant at sunset" />
+                <figcaption>Rumus <strong>Luas Jajar Genjang = alas x tinggi</strong></figcaption>
+            </figure>
+
+            <div id="form1">
+                <h3>Hitung Luas Jajar Genjang</h3>
+                <form id="luas-form">
+                    <div>
+                        <label for="alas_jajar_genjang">Nilai alas (cm):</label>
+                        <input type="number" min="1" id="alas_jajar_genjang" name="alas_jajar_genjang" required>
+                    </div>
+                    <div>
+                        <label for="tinggi_jajar_genjang">Nilai tinggi (cm):</label>
+                        <input type="number" min="1" id="tinggi_jajar_genjang" name="tinggi_jajar_genjang" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Hitung" id="hitungLuasJajarGenjang">
+        
+                        <button id="resetLuasJajarGenjang">Reset</button>
+                    </div>
+                </form>
+    
+                <div id="resultLuasJajarGenjang">
+                </div>
+            </div>
+        </div>
+
+
+        <div id="keliling-jajar-genjang">
+            <h2>Keliling Jajar Genjang</h2>
+
+            <figure>
+                <img src="img/jajar-genjang.png" alt="Elephant at sunset" />
+                <figcaption>Rumus <strong>Keliling Jajar Genjang = s x s x s</strong></figcaption>
+            </figure>
+
+            <div id="form2">
+                <h3>Hitung Keliling Jajar Genjang</h3>
+                <form id="keliling-form">
+                    <div>
+                        <label for="sisi1">Sisi 1 (cm)</label>
+                        <input type="number" min="1" id="sisi1" name="sisi1" required>
+                    </div>
+                    <div>
+                        <label for="sisi2">Sisi 2 (cm)</label>
+                        <input type="number" min="1" id="sisi2" name="sisi2" required>
+                    </div>
+                    <div>
+                        <label for="sisi3">Sisi 3 (cm)</label>
+                        <input type="number" min="1" id="sisi3" name="sisi3" required>
+                    </div>
+                    <div>
+                        <label for="sisi4">Sisi 4 (cm)</label>
+                        <input type="number" min="1" id="sisi4" name="sisi4" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Hitung" id="hitungKelilingJajarGenjang">
+                        <button id="resetKelilingJajarGenjang">Reset</button>
+                    </div>
+                </form>
+    
+                <div id="resultKelilingJajarGenjang">
                 </div>
             </div>
         </div>

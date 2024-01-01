@@ -59,7 +59,7 @@ main{
     text-align: center;
 }
 
-#luas-segitiga, #keliling-segitiga{
+#luas-segitiga, #keliling-segitiga, #luas-jajar-genjang, #keliling-jajar-genjang{
     border: 2px dashed saddlebrown;
     margin: 1rem;
     padding: 1rem;
@@ -86,7 +86,7 @@ main{
     padding: 0.5rem;
 }
 
-#alas, #tinggi, #sisi1, #sisi2, #sisi3 {
+#alas_segitiga, #tinggi_segitiga, #alas_jajar_genjang, #tinggi_jajar_genjang, #sisi1, #sisi2, #sisi3, #sisi4{
     border: 2px dotted black;
 }
 input:focus {
@@ -97,10 +97,14 @@ label {
   padding-right: 10px;
 }
 
-#resultLuas, #resultKeliling{
+#resultLuasSegitiga, #resultKelilingSegitiga, #resultLuasJajarGenjang, #resultKelilingJajarGenjang{
     background-color: aqua;
 }
 
-#resultLuas > p, #resultKeliling > p{
+#resetLuasSegitiga:focus, #resetKelilingSegitiga:focus, #resetLuasJajarGenjang:focus, #resetKelilingJajarGenjang:focus{
+    background-color: lightgreen;
+}
+
+#resultLuasSegitiga > p, #resultKelilingSegitiga > p, #resultLuasJajarGenjang > p, #resultKelilingJajarGenjang > p{
     margin: 0.5rem;
 }
