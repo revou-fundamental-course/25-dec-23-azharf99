@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let sisi2 = document.getElementById('sisi2')
     let sisi3 = document.getElementById('sisi3')
     let sisi4 = document.getElementById('sisi4')
+    let sisi5 = document.getElementById('sisi5')
+    let sisi6 = document.getElementById('sisi6')
+    let sisi7 = document.getElementById('sisi7')
 
 
     let luas_segitiga = document.getElementById('luas-segitiga')
@@ -136,16 +139,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     document.getElementById('hitungKelilingJajarGenjang').addEventListener('click', (e)=>{
 
-        if (sisi1.value && sisi2.value && sisi3.value && sisi4.value){
+        if (sisi4.value && sisi5.value && sisi6.value && sisi7.value){
             resultKelilingJajarGenjang.textContent = ""
             const p0 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
             p0.textContent = "Hasil Perhitungan:"
             const p1 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
             p1.textContent = "K = a + b + c + d"
             const p2 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
-            p2.textContent = `K = ${sisi1.value} x ${sisi2.value} x ${sisi3.value} x ${sisi4.value} `
+            p2.textContent = `K = ${sisi4.value} x ${sisi5.value} x ${sisi6.value} x ${sisi7.value} `
             const p3 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
-            p3.textContent =  `K = ${(sisi1.value*sisi2.value*sisi3.value*sisi4.value)} cm`
+            p3.textContent =  `K = ${(sisi4.value*sisi5.value*sisi6.value*sisi7.value)} cm`
             e.preventDefault()
         }
 
@@ -153,10 +156,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 
     document.getElementById('resetKelilingJajarGenjang').addEventListener('click', (e)=>{
-        sisi1.value = "";
-        sisi2.value = "";
-        sisi3.value = "";
         sisi4.value = "";
+        sisi5.value = "";
+        sisi6.value = "";
+        sisi7.value = "";
 
         resultKelilingJajarGenjang.textContent = ""
         e.preventDefault()

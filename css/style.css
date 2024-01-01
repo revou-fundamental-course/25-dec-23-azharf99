@@ -86,7 +86,7 @@ main{
     padding: 0.5rem;
 }
 
-#alas_segitiga, #tinggi_segitiga, #alas_jajar_genjang, #tinggi_jajar_genjang, #sisi1, #sisi2, #sisi3, #sisi4{
+#alas_segitiga, #tinggi_segitiga, #alas_jajar_genjang, #tinggi_jajar_genjang, #sisi1, #sisi2, #sisi3, #sisi4, #sisi5, #sisi6, #sisi7{
     border: 2px dotted black;
 }
 input:focus {
