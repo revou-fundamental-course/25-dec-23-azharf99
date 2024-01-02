@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const p1 = resultKelilingSegitiga.appendChild(document.createElement("p"))
             p1.textContent = "K = s + s + s"
             const p2 = resultKelilingSegitiga.appendChild(document.createElement("p"))
-            p2.textContent = `K = ${sisi1.value} + ${sisi2.value} + ${sisi3.value}`
+            p2.textContent = `K = ${parseFloat(sisi1.value)} + ${parseFloat(sisi2.value)} + ${parseFloat(sisi3.value)}`
             const p3 = resultKelilingSegitiga.appendChild(document.createElement("p"))
-            p3.textContent =  `K = ${(sisi1.value + sisi2.value + sisi3.value)} cm`
+            p3.textContent =  `K = ${(parseFloat(sisi1.value) + parseFloat(sisi2.value) + parseFloat(sisi3.value))} cm`
             e.preventDefault()
         }
 
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const p2 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
             p2.textContent = `K = ${sisi4.value} + ${sisi5.value} + ${sisi6.value} + ${sisi7.value} `
             const p3 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
-            p3.textContent =  `K = ${(sisi4.value + sisi5.value + sisi6.value + sisi7.value)} cm`
+            p3.textContent =  `K = ${(parseFloat(sisi4.value) + parseFloat(sisi5.value) + parseFloat(sisi6.value) + parseFloat(sisi7.value))} cm`
             e.preventDefault()
         }
 
