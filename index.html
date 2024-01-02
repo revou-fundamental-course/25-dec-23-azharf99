@@ -6,7 +6,6 @@
     <meta name="description" content="Aplikasi Kalkulator Matematika">
     <title>Kalkulator Matematik Segitiga</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -20,47 +19,51 @@
         <details>
             <summary>Segitiga</summary>
             <ul>
-                <li><a href="#luas-segitiga" id="tombol_luas_segitiga">Luas Segitiga</a></li>
-                <li><a href="#keliling-segitiga" id="tombol_keliling_segitiga">Keliling Segitiga</a></li>
+                <li><a href="#luasSegitiga" id="tombolLuasSegitiga">Luas Segitiga</a></li>
+                <li><a href="#kelilingSegitiga" id="tombolKelilingSegitiga">Keliling Segitiga</a></li>
             </ul>
         </details>          
         <details>
             <summary>Jajar Genjang</summary>
             <ul>
-                <li><a href="#luas-jajar-genjang" id="tombol_luas_jajar_genjang">Luas Jajar Genjang</a></li>
-                <li><a href="#keliling-jajar-genjang" id="tombol_keliling_jajar_genjang">Keliling Jajar Genjang</a></li>
+                <li><a href="#luasJajarGenjang" id="tombolLuasJajarGenjang">Luas Jajar Genjang</a></li>
+                <li><a href="#kelilingJajarGenjang" id="tombolKelilingJajarGenjang">Keliling Jajar Genjang</a></li>
             </ul>
         </details>          
     </nav>
 
     <div id="backOnTop">
         <a href="#" aria-label="Back to Top">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
-                <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
-              </svg>
+            
         </a>
    </div>
+   <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+        <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
+      </svg>
+    </button>
 
     <main>
 
-        <div id="luas-segitiga">
+        <div id="luasSegitiga">
             <h2>Luas Segitiga</h2>
 
             <figure>
                 <img src="img/segitiga-sama-kaki.png" alt="Elephant at sunset" />
-                <figcaption>Rumus <strong>Luas segitiga = 1/2 x alas x tinggi</strong></figcaption>
+                <figcaption>Rumus Luas segitiga</figcaption>
             </figure>
-
+            <p><strong>L = 1/2 x alas x tinggi</strong></p>
+            
             <div id="form1">
                 <h3>Hitung Luas Segitiga</h3>
                 <form id="luas-form">
                     <div>
-                        <label for="alas_segitiga">Nilai alas (cm):</label>
-                        <input type="number" min="1" id="alas_segitiga" name="alas_segitiga" required>
+                        <label for="alasSegitiga">Nilai alas (cm):</label>
+                        <input type="number" min="1" id="alasSegitiga" name="alasSegitiga" required>
                     </div>
                     <div>
-                        <label for="tinggi_segitiga">Nilai tinggi (cm):</label>
-                        <input type="number" min="1" id="tinggi_segitiga" name="tinggi_segitiga" required>
+                        <label for="tinggiSegitiga">Nilai tinggi (cm):</label>
+                        <input type="number" min="1" id="tinggiSegitiga" name="tinggiSegitiga" required>
                     </div>
                     <div>
                         <input type="submit" value="Hitung" id="hitungLuasSegitiga">
@@ -75,13 +78,14 @@
         </div>
 
 
-        <div id="keliling-segitiga">
+        <div id="kelilingSegitiga">
             <h2>Keliling Segitiga</h2>
 
             <figure>
                 <img src="img/segitiga-sama-kaki.png" alt="Elephant at sunset" />
-                <figcaption>Rumus <strong>Keliling segitiga = s + s + s</strong></figcaption>
+                <figcaption>Rumus Keliling Segitiga</figcaption>
             </figure>
+            <p><strong>K = s + s + s</strong></p>
 
             <div id="form2">
                 <h3>Hitung Keliling Segitiga</h3>
@@ -109,24 +113,25 @@
             </div>
         </div>
 
-        <div id="luas-jajar-genjang">
+        <div id="luasJajarGenjang">
             <h2>Luas Jajar Genjang</h2>
 
             <figure>
                 <img src="img/jajar-genjang.png" alt="Elephant at sunset" />
-                <figcaption>Rumus <strong>Luas Jajar Genjang = alas x tinggi</strong></figcaption>
+                <figcaption>Rumus Luas Jajar Genjang</figcaption>
             </figure>
+            <p><strong>Luas = alas x tinggi</strong></p>
 
             <div id="form1">
                 <h3>Hitung Luas Jajar Genjang</h3>
                 <form id="luas-form">
                     <div>
-                        <label for="alas_jajar_genjang">Nilai alas (cm):</label>
-                        <input type="number" min="1" id="alas_jajar_genjang" name="alas_jajar_genjang" required>
+                        <label for="alasJajarGenjang">Nilai alas (cm):</label>
+                        <input type="number" min="1" id="alasJajarGenjang" name="alasJajarGenjang" required>
                     </div>
                     <div>
-                        <label for="tinggi_jajar_genjang">Nilai tinggi (cm):</label>
-                        <input type="number" min="1" id="tinggi_jajar_genjang" name="tinggi_jajar_genjang" required>
+                        <label for="tinggiJajarGenjang">Nilai tinggi (cm):</label>
+                        <input type="number" min="1" id="tinggiJajarGenjang" name="tinggiJajarGenjang" required>
                     </div>
                     <div>
                         <input type="submit" value="Hitung" id="hitungLuasJajarGenjang">
@@ -141,31 +146,32 @@
         </div>
 
 
-        <div id="keliling-jajar-genjang">
+        <div id="kelilingJajarGenjang">
             <h2>Keliling Jajar Genjang</h2>
 
             <figure>
                 <img src="img/jajar-genjang.png" alt="Elephant at sunset" />
-                <figcaption>Rumus <strong>Keliling Jajar Genjang = s + s + s + s</strong></figcaption>
+                <figcaption>Rumus Keliling Jajar Gejang</figcaption>
             </figure>
+            <p><strong>K= a + b + c + d</strong></p>
 
             <div id="form2">
                 <h3>Hitung Keliling Jajar Genjang</h3>
                 <form id="keliling-form">
                     <div>
-                        <label for="sisi4">Sisi 1 (cm)</label>
+                        <label for="sisi4">Sisi a (cm)</label>
                         <input type="number" min="1" id="sisi4" name="sisi4" required>
                     </div>
                     <div>
-                        <label for="sisi5">Sisi 2 (cm)</label>
+                        <label for="sisi5">Sisi b (cm)</label>
                         <input type="number" min="1" id="sisi5" name="sisi5" required>
                     </div>
                     <div>
-                        <label for="sisi6">Sisi 3 (cm)</label>
+                        <label for="sisi6">Sisi c (cm)</label>
                         <input type="number" min="1" id="sisi6" name="sisi6" required>
                     </div>
                     <div>
-                        <label for="sisi7">Sisi 4 (cm)</label>
+                        <label for="sisi7">Sisi d (cm)</label>
                         <input type="number" min="1" id="sisi7" name="sisi7" required>
                     </div>
                     <div>
@@ -189,6 +195,6 @@
         <p>Created by &copy; Azhar Faturohman Ahidin</p>
     </footer>
 
-    
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -59,7 +59,7 @@ main{
     text-align: center;
 }
 
-#luas-segitiga, #keliling-segitiga, #luas-jajar-genjang, #keliling-jajar-genjang{
+#luasSegitiga, #kelilingSegitiga, #luasJajarGenjang, #kelilingJajarGenjang{
     border: 2px dashed saddlebrown;
     margin: 1rem;
     padding: 1rem;
@@ -86,7 +86,7 @@ main{
     padding: 0.2rem;
 }
 
-#alas_segitiga, #tinggi_segitiga, #alas_jajar_genjang, #tinggi_jajar_genjang, #sisi1, #sisi2, #sisi3, #sisi4, #sisi5, #sisi6, #sisi7{
+#alasSegitiga, #tinggiSegitiga, #alasJajarGenjang, #tinggiJajarGenjang, #sisi1, #sisi2, #sisi3, #sisi4, #sisi5, #sisi6, #sisi7{
     border: 2px dotted black;
 }
 input:focus {
@@ -128,11 +128,28 @@ footer{
 }
 
 #backOnTop > a > svg{
-    color: lightcoral;
-    box-shadow: 3px 3px 3px red;
+    color: #007BFF;
+    box-shadow: 3px 3px 10px #007BFF;
 }
 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 5px;
+    font-size: 16px;
+}
 
+#myBtn:hover {
+    padding: 5px 5px;
+    background-color: #0056b3;
+    color: white;
+}
 
 
 @media screen and (max-width: 700px) {
