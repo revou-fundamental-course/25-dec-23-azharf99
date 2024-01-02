@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const p0 = resultKelilingSegitiga.appendChild(document.createElement("p"))
             p0.textContent = "Hasil Perhitungan:"
             const p1 = resultKelilingSegitiga.appendChild(document.createElement("p"))
-            p1.textContent = "K = s x s x s"
+            p1.textContent = "K = s + s + s"
             const p2 = resultKelilingSegitiga.appendChild(document.createElement("p"))
-            p2.textContent = `K = ${sisi1.value} x ${sisi2.value} x ${sisi3.value}`
+            p2.textContent = `K = ${sisi1.value} + ${sisi2.value} + ${sisi3.value}`
             const p3 = resultKelilingSegitiga.appendChild(document.createElement("p"))
-            p3.textContent =  `K = ${(sisi1.value*sisi2.value*sisi3.value)} cm`
+            p3.textContent =  `K = ${(sisi1.value + sisi2.value + sisi3.value)} cm`
             e.preventDefault()
         }
 
@@ -146,9 +146,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const p1 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
             p1.textContent = "K = a + b + c + d"
             const p2 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
-            p2.textContent = `K = ${sisi4.value} x ${sisi5.value} x ${sisi6.value} x ${sisi7.value} `
+            p2.textContent = `K = ${sisi4.value} + ${sisi5.value} + ${sisi6.value} + ${sisi7.value} `
             const p3 = resultKelilingJajarGenjang.appendChild(document.createElement("p"))
-            p3.textContent =  `K = ${(sisi4.value*sisi5.value*sisi6.value*sisi7.value)} cm`
+            p3.textContent =  `K = ${(sisi4.value + sisi5.value + sisi6.value + sisi7.value)} cm`
             e.preventDefault()
         }
 
