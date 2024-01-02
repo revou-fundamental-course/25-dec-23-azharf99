@@ -82,8 +82,8 @@ main{
 }
 
 #luas-form > div, #keliling-form > div{
-    margin: 0.5rem;
-    padding: 0.5rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
 }
 
 #alas_segitiga, #tinggi_segitiga, #alas_jajar_genjang, #tinggi_jajar_genjang, #sisi1, #sisi2, #sisi3, #sisi4, #sisi5, #sisi6, #sisi7{
@@ -94,7 +94,7 @@ input:focus {
 }
 
 label {
-  padding-right: 10px;
+  padding: 10px;
 }
 
 #resultLuasSegitiga, #resultKelilingSegitiga, #resultLuasJajarGenjang, #resultKelilingJajarGenjang{
@@ -132,4 +132,10 @@ footer{
     padding: 0;
     margin: 0;
     font-size: 0.6rem;
+}
+
+@media screen and (max-width: 700px) {
+    img{
+        width: 100%;
+    }
 }
