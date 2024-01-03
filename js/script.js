@@ -49,32 +49,59 @@ class GeometryCalculator {
   
       // Menulis di paragraf yang kedua dan seterusnya.
       if (this.calculationType === 'Luas' && this.geometry === "Segitiga" && this.alas.value && this.tinggi.value) {
-        arrParagraph[0].textContent = 'Hasil Perhitungan:';
-        let arrText = [`L = 1/2 a x t`, `L = ${this.alas.value} x ${this.tinggi.value}`, `L = ${(this.alas.value * this.tinggi.value)/2} cm`]
-        for(let i=1; i<=3; i++){
-            arrParagraph[i].textContent = arrText[i-1]
-          }
+        if(parseFloat(this.alas.value) <= 0 || parseFloat(this.tinggi.value) <= 0){
+            window.alert("masukan nilai lebih dari 0!")
+            this.alas.value = ''
+            this.tinggi.value = ''
+        } else{
+            arrParagraph[0].textContent = 'Hasil Perhitungan:';
+            let arrText = [`L = 1/2 a x t`, `L = ${this.alas.value} x ${this.tinggi.value}`, `L = ${(this.alas.value * this.tinggi.value)/2} cm`]
+            for(let i=1; i<=3; i++){
+                arrParagraph[i].textContent = arrText[i-1]
+              }
+        }
       } 
       else if (this.calculationType === 'Luas' && this.geometry === "JajarGenjang" && this.alas.value && this.tinggi.value) {
-        arrParagraph[0].textContent = 'Hasil Perhitungan:';
-        let arrText = [`L = a x t`, `L = ${this.alas.value} x ${this.tinggi.value}`, `L = ${(this.alas.value * this.tinggi.value)} cm`]
-        for(let i=1; i<=3; i++){
-            arrParagraph[i].textContent = arrText[i-1]
-          }
+        if(parseFloat(this.alas.value) <= 0 || parseFloat(this.tinggi.value) <= 0){
+            window.alert("masukan nilai lebih dari 0!")
+            this.alas.value = ''
+            this.tinggi.value = ''
+        } else{
+            arrParagraph[0].textContent = 'Hasil Perhitungan:';
+            let arrText = [`L = a x t`, `L = ${this.alas.value} x ${this.tinggi.value}`, `L = ${(this.alas.value * this.tinggi.value)} cm`]
+            for(let i=1; i<=3; i++){
+                arrParagraph[i].textContent = arrText[i-1]
+            }
+        }
       } 
       else if (this.calculationType === 'Keliling' && this.geometry === "Segitiga" && this.arr[0].value && this.arr[1].value && this.arr[2].value) {
-        arrParagraph[0].textContent = 'Hasil Perhitungan:';  
-        let arrText = [`K = s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value))} cm`]
-          for(let i=1; i<=3; i++){
-              arrParagraph[i].textContent = arrText[i-1]
-            }
+        if(parseFloat(this.arr[0].value) <= 0 || parseFloat(this.arr[1].value) <= 0 || parseFloat(this.arr[2].value) <= 0){
+            window.alert("masukan nilai lebih dari 0!")
+            this.arr[0].value = ''
+            this.arr[1].value = ''
+            this.arr[2].value = ''
+        } else{
+            arrParagraph[0].textContent = 'Hasil Perhitungan:';  
+            let arrText = [`K = s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value))} cm`]
+            for(let i=1; i<=3; i++){
+                arrParagraph[i].textContent = arrText[i-1]
+                }
+        }
       } 
       else if (this.calculationType === 'Keliling' && this.geometry === "JajarGenjang" && this.arr[0].value && this.arr[1].value && this.arr[2].value && this.arr[3].value) {
-        arrParagraph[0].textContent = 'Hasil Perhitungan:';  
-        let arrText = [`K = s + s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value} + ${this.arr[3].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value) + parseFloat(this.arr[3].value))} cm`]
-          for(let i=1; i<=3; i++){
-              arrParagraph[i].textContent = arrText[i-1]
-            }
+        if(parseFloat(this.arr[0].value) <= 0 || parseFloat(this.arr[1].value) <= 0 || parseFloat(this.arr[2].value) <= 0 || parseFloat(this.arr[3].value) <= 0){
+            window.alert("masukan nilai lebih dari 0!")
+            this.arr[0].value = ''
+            this.arr[1].value = ''
+            this.arr[2].value = ''
+            this.arr[3].value = ''
+        } else{
+            arrParagraph[0].textContent = 'Hasil Perhitungan:';  
+            let arrText = [`K = s + s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value} + ${this.arr[3].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value) + parseFloat(this.arr[3].value))} cm`]
+            for(let i=1; i<=3; i++){
+                arrParagraph[i].textContent = arrText[i-1]
+                }
+        }
       }
     }
   
@@ -104,73 +131,73 @@ class GeometryCalculator {
   
   // Logic untuk menghitung Luas Segitiga
   document.getElementById('hitungLuasSegitiga').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Luas", "Segitiga");
       calculator.showResult()
+      e.preventDefault()
   
   });
   
   // Logic untuk menghitung Keliling Segitiga
   document.getElementById('hitungKelilingSegitiga').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Keliling", "Segitiga");
       calculator.showResult()
+      e.preventDefault()
   
   });
   
   // Logic untuk menghitung Luas Jajar Genjang
   document.getElementById('hitungLuasJajarGenjang').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Luas", "JajarGenjang");
       calculator.showResult()
+      e.preventDefault()
   
   });
   
   // Logic untuk menghitung Keliling Jajar Genjang
   document.getElementById('hitungKelilingJajarGenjang').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Keliling", "JajarGenjang");
       calculator.showResult()
+      e.preventDefault()
   
   });
   
   // Logic untuk mereset input Luas Segitiga
   document.getElementById('resetLuasSegitiga').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Luas", "Segitiga");
       calculator.resetInputs()
+      e.preventDefault()
   
   });
   
   // Logic untuk mereset input Keliling Segitiga
   document.getElementById('resetKelilingSegitiga').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Keliling", "Segitiga");
       calculator.resetInputs()
+      e.preventDefault()
   
   });
   
   // Logic untuk mereset input Luas Jajar Genjang
   document.getElementById('resetLuasJajarGenjang').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Luas", "JajarGenjang");
       calculator.resetInputs()
+      e.preventDefault()
   
   });
   
   // Logic untuk mereset input Keliling jajar Genjang
   document.getElementById('resetKelilingJajarGenjang').addEventListener('click', (e)=>{
-      e.preventDefault()
       // Instantiate the GeometryCalculator class
       const calculator = new GeometryCalculator("Keliling", "JajarGenjang");
       calculator.resetInputs()
+      e.preventDefault()
   
   });
   
@@ -238,7 +265,6 @@ class GeometryCalculator {
 
 
 document.getElementById('tombolLuasSegitiga').addEventListener('click', (e)=>{
-    e.preventDefault()
     // Instantiate the GeometryCalculator class
     const button = new ShowGeometry("Luas", "Segitiga");
     button.showElement()
@@ -246,21 +272,18 @@ document.getElementById('tombolLuasSegitiga').addEventListener('click', (e)=>{
 });
 
 document.getElementById('tombolKelilingSegitiga').addEventListener('click', (e)=>{
-    e.preventDefault()
     // Instantiate the GeometryCalculator class
     const button = new ShowGeometry("Keliling", "Segitiga");
     button.showElement()
 
 });
 document.getElementById('tombolLuasJajarGenjang').addEventListener('click', (e)=>{
-    e.preventDefault()
     // Instantiate the GeometryCalculator class
     const button = new ShowGeometry("Luas", "JajarGenjang");
     button.showElement()
 
 });
 document.getElementById('tombolKelilingJajarGenjang').addEventListener('click', (e)=>{
-    e.preventDefault()
     // Instantiate the GeometryCalculator class
     const button = new ShowGeometry("Keliling", "JajarGenjang");
     button.showElement()
@@ -268,35 +291,37 @@ document.getElementById('tombolKelilingJajarGenjang').addEventListener('click', 
 });
 
 
-const darkModeToggle = document.getElementById('darkModeToggle');
-const lightModeToggle = document.getElementById('lightModeToggle');
-const form = document.getElementsByClassName('form');
-console.log(form)
-const body = document.body;
+document.addEventListener('DOMContentLoaded', ()=>{
+    
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const lightModeToggle = document.getElementById('lightModeToggle');
+    const form = document.getElementsByClassName('form');
+    const body = document.body;
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    darkModeToggle.style.display = 'block'
-    lightModeToggle.style.display = 'none'
-}
-else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    darkModeToggle.style.display = 'block'
-    lightModeToggle.style.display = 'none'
-}
-
-darkModeToggle.addEventListener('click', function () {
-    body.classList.toggle('dark-mode');
-    darkModeToggle.style.display = 'none'
-    lightModeToggle.style.display = 'block'
-    for(node of form){
-        node.style.color = 'black'
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        darkModeToggle.style.display = 'block'
+        lightModeToggle.style.display = 'none'
     }
-});
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        darkModeToggle.style.display = 'block'
+        lightModeToggle.style.display = 'none'
+    }
 
-lightModeToggle.addEventListener('click', function () {
-    body.classList.toggle('dark-mode');
-    lightModeToggle.style.display = 'none'
-    darkModeToggle.style.display = 'block'
-});
+    darkModeToggle.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        darkModeToggle.style.display = 'none'
+        lightModeToggle.style.display = 'block'
+        for(node of form){
+            node.style.color = 'black'
+        }
+    });
+
+    lightModeToggle.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        lightModeToggle.style.display = 'none'
+        darkModeToggle.style.display = 'block'
+    });
+})
 
 // CODE VERSI LAMA SEBELUM REFAKTOR
 

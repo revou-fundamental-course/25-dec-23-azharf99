@@ -107,7 +107,6 @@ main{
 
 #form1, #form2, #form3, #form4{
     background-color: lightgreen;
-    min-width: fit-content;
     display: flex;
     flex-direction: column;
 }
@@ -144,11 +143,11 @@ input[type="submit"], form div button{
 }
 
 input[type="submit"]{
-    background-color: #007BFF;
+    background-color: #0000FF;
 }
 
 form div button{
-    background-color: lightcoral;
+    background-color: #AB1231;
 }
 
 
@@ -192,8 +191,8 @@ footer{
 }
 
 #backOnTop > a > svg{
-    color: #007BFF;
-    box-shadow: 3px 3px 10px #007BFF;
+    color: #0000FF;
+    box-shadow: 3px 3px 10px #0000FF;
 }
 
 #myBtn {
@@ -201,7 +200,7 @@ footer{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    color: #007BFF;
+    color: #0000FF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
