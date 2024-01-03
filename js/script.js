@@ -47,30 +47,31 @@ class GeometryCalculator {
           arrParagraph.push(resultElement.appendChild(document.createElement('p')))
       }
   
-      // Menulis di paragraf yang pertama
-      arrParagraph[0].textContent = 'Hasil Perhitungan:';
-  
       // Menulis di paragraf yang kedua dan seterusnya.
       if (this.calculationType === 'Luas' && this.geometry === "Segitiga" && this.alas.value && this.tinggi.value) {
+        arrParagraph[0].textContent = 'Hasil Perhitungan:';
         let arrText = [`L = 1/2 a x t`, `L = ${this.alas.value} x ${this.tinggi.value}`, `L = ${(this.alas.value * this.tinggi.value)/2} cm`]
         for(let i=1; i<=3; i++){
             arrParagraph[i].textContent = arrText[i-1]
           }
       } 
       else if (this.calculationType === 'Luas' && this.geometry === "JajarGenjang" && this.alas.value && this.tinggi.value) {
+        arrParagraph[0].textContent = 'Hasil Perhitungan:';
         let arrText = [`L = a x t`, `L = ${this.alas.value} x ${this.tinggi.value}`, `L = ${(this.alas.value * this.tinggi.value)} cm`]
         for(let i=1; i<=3; i++){
             arrParagraph[i].textContent = arrText[i-1]
           }
       } 
       else if (this.calculationType === 'Keliling' && this.geometry === "Segitiga" && this.arr[0].value && this.arr[1].value && this.arr[2].value) {
-          let arrText = [`K = s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value))} cm`]
+        arrParagraph[0].textContent = 'Hasil Perhitungan:';  
+        let arrText = [`K = s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value))} cm`]
           for(let i=1; i<=3; i++){
               arrParagraph[i].textContent = arrText[i-1]
             }
       } 
       else if (this.calculationType === 'Keliling' && this.geometry === "JajarGenjang" && this.arr[0].value && this.arr[1].value && this.arr[2].value && this.arr[3].value) {
-          let arrText = [`K = s + s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value} + ${this.arr[3].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value) + parseFloat(this.arr[3].value))} cm`]
+        arrParagraph[0].textContent = 'Hasil Perhitungan:';  
+        let arrText = [`K = s + s + s + s`, `K = ${this.arr[0].value} + ${this.arr[1].value} + ${this.arr[2].value} + ${this.arr[3].value}`, `K = ${(parseFloat(this.arr[0].value) + parseFloat(this.arr[1].value) + parseFloat(this.arr[2].value) + parseFloat(this.arr[3].value))} cm`]
           for(let i=1; i<=3; i++){
               arrParagraph[i].textContent = arrText[i-1]
             }
@@ -243,6 +244,7 @@ document.getElementById('tombolLuasSegitiga').addEventListener('click', (e)=>{
     button.showElement()
 
 });
+
 document.getElementById('tombolKelilingSegitiga').addEventListener('click', (e)=>{
     e.preventDefault()
     // Instantiate the GeometryCalculator class
@@ -263,6 +265,37 @@ document.getElementById('tombolKelilingJajarGenjang').addEventListener('click', 
     const button = new ShowGeometry("Keliling", "JajarGenjang");
     button.showElement()
 
+});
+
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+const lightModeToggle = document.getElementById('lightModeToggle');
+const form = document.getElementsByClassName('form');
+console.log(form)
+const body = document.body;
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkModeToggle.style.display = 'block'
+    lightModeToggle.style.display = 'none'
+}
+else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    darkModeToggle.style.display = 'block'
+    lightModeToggle.style.display = 'none'
+}
+
+darkModeToggle.addEventListener('click', function () {
+    body.classList.toggle('dark-mode');
+    darkModeToggle.style.display = 'none'
+    lightModeToggle.style.display = 'block'
+    for(node of form){
+        node.style.color = 'black'
+    }
+});
+
+lightModeToggle.addEventListener('click', function () {
+    body.classList.toggle('dark-mode');
+    lightModeToggle.style.display = 'none'
+    darkModeToggle.style.display = 'block'
 });
 
 // CODE VERSI LAMA SEBELUM REFAKTOR
@@ -429,4 +462,6 @@ document.getElementById('tombolKelilingJajarGenjang').addEventListener('click', 
 //         resultKelilingJajarGenjang.textContent = ""
 //         e.preventDefault()
 //     })
+
+
 
